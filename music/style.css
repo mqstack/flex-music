@@ -109,24 +109,30 @@ li:nth-child(2n) {
 
 footer {
 	display: flex;
-	flex: 0 0 auto;
+	flex: 0 0 90px;
+	padding: 10px;
+	color: white;
 }
 
 .footer-left {
 	display: flex;
 	flex: 0 0 auto;
 	margin-right: auto;
+	align-items: center;
 }
 
 .footer-right {
 	display: flex;
-	flex: 0 0 auto;
+	align-items: center;
+	justify-content: space-between;
+	width: 50%;
+	padding: 0 40px;
 }
 
-.footer-right i {
+/*.footer-right i {
 	padding: 0 60px;
 	align-self: center;
-}
+}*/
 
 .footer-left img {
 	flex: 0 0 auto;
@@ -146,4 +152,48 @@ footer {
 .playing-info p:nth-child(2) {
 	padding: 10px 0;
 	margin: 0;
+}
+
+@media screen and (max-width: 64em) {
+	.sm-hide {
+		display: none;
+	}
+
+	.sm-text-right {
+		text-align:right; 
+	}
+
+	.music-head {
+		flex: 0 0 auto;
+		flex-direction: column;
+		align-items: center;
+		padding: 40px 0;
+	}
+	.music-head .catty-music {
+		padding: 0;
+		align-items: center;
+	}
+
+	.music-head img {
+		width: 150px;
+	}
+
+	.catty-music div:nth-child(1) p:first-child{
+		font-size: 1em;
+		margin: 20px 0;
+	}
+
+	li p{
+		flex: 0 0 50%;
+	}
+
+	.footer-right {
+		justify-content: space-around;
+		padding: 0;
+	}
+
+	.footer-right .sm-hide {
+		display: none;
+	}
+
 }
